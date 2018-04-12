@@ -1,0 +1,91 @@
+/*上下移动*/
+.animate {
+	animation: upDown 5s;
+	animation-iteration-count: infinite;/*无限循环*/
+	animation-timing-function:linear;/*匀速*/
+	/* Safari 与 Chrome */
+	-webkit-animation: upDown 5s;
+	-webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear; 
+}
+
+@keyframes upDown {
+	0% {
+		transform: translateY(0px);
+	}
+	25% {
+		transform: translateY(-20px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes upDown
+/* Safari and Chrome */
+
+	{
+	0% {
+		transform: translateY(0px);
+	}
+	25% {
+		transform: translateY(-20px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+.animateFlyTop{
+	animation: flytop 2s;
+	animation-timing-function:linear;/*匀速*/
+	-webkit-animation: flytop 2s;
+	-webkit-animation-timing-function:linear;/*匀速*/
+}
+@keyframes flytop{
+	0%{transform: translateY(-100px)}
+	100%{transform: translateY(0)}
+}
+@-webkit-keyframes flytop{
+	0%{transform: translateY(-100px)}
+	100%{transform: translateY(0)}
+}
+.animateFlyLeft{
+	animation: flyleft 2s;
+	animation-timing-function:linear;/*匀速*/
+	-webkit-animation: flyleft 2s;
+	-webkit-animation-timing-function:linear;/*匀速*/
+}
+@keyframes flyleft{
+	0%{transform: translateX(-200px)}
+	100%{transform: translateX(0)}
+}
+@-webkit-keyframes flyleft{
+	0%{transform: translateX(-200px)}
+	100%{transform: translateX(0)}
+}
+.animateFlyRight{
+	animation: flyright 2s;
+	animation-timing-function:linear;/*匀速*/
+	-webkit-animation: flyright 2s;
+	-webkit-animation-timing-function:linear;/*匀速*/
+}
+@keyframes flyright{
+	0%{transform: translateX(600px)}
+	100%{transform: translateX(0px)}
+}
+@-webkit-keyframes flyright{
+	0%{transform: translateX(600px)}
+	100%{transform: translateX(0)}
+}

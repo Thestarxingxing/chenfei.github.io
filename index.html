@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/animate.css">
+	<title>颁奖倒计时</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: black
+		}
+		.container{
+			position: relative;
+			width: 1200px;
+			height: 1297px;
+			margin: 0 auto;
+		}
+		.video{
+			position: absolute;
+			z-index: -10;
+			top: 135px;
+			opacity: 0.4;
+			filter:grayscale(1);
+			-webkit-filter:grayscale(1);
+		}
+		
+		.p1{
+			position: absolute;
+			z-index: 20;
+			left: 74px;
+			
+		}
+		.p2{
+			position: absolute;
+			z-index: 19;
+			left: 74px;
+		}
+		.p3{
+			position: absolute;
+			z-index: 18;
+			left: 74px;
+		}
+		.p4{
+			position: absolute;
+			z-index: 17;
+			left: 74px;
+		}
+		.words1{
+			position: absolute;
+			z-index: 30;
+			display: none;
+			left:300px;
+			top:40px;
+		}
+		.words2{
+			position: absolute;
+			z-index: 34;
+			display: none;
+			left:0px;
+			top:750px;
+		}
+		.words3{
+			position: absolute;
+			z-index: 35;
+			display: none;
+			left:600px;
+			top:750px;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container tc">
+  <div class="video">
+		<video loop="loop" autoplay="autoplay" width="1280px">
+		<source src="img/dff6566ae84d43b0afd7fb836896d7b8-5287d2089db37e62345123a1be272f8b.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="p1 animate">
+		<img src="img/p1.png">
+	</div>
+	<div class="p2 animate">
+		<img src="img/p2.png">
+	</div>
+	<div class="p3 animate">
+		<img src="img/p3.png">
+	</div>
+	<div class="p4 animate">
+		<img src="img/p4.png">
+	</div>
+	<div class="words1 animateFlyTop">
+	  <img src="img/words1.png">
+	</div>
+	<div class="words2 animateFlyLeft">
+		<img src="img/words2.png">
+	</div>
+	<div class="words3 animateFlyRight">
+		<img src="img/words3.png">
+	</div>
+</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script>
+	$(function(){
+		$(".p1").click(function(){
+			$('.p1').remove();
+		});
+		$(".p2").click(function(){
+			$('.p2').remove();
+		});
+		$(".p3").click(function(){
+			$('.p3').remove();
+			$('.words1').css("display","block");
+			$('.words2').css("display","block");
+			$('.words3').css("display","block");
+		});
+	})
+	</script>
+</body>
+</html>
